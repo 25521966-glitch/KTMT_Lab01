@@ -1,3 +1,14 @@
+# $s0 : Số kWh nhập vào / Số kWh còn lại chưa tính tiền
+# $s1 : Tổng tiền điện cộng dồn (đồng)
+# $s2 : Con trỏ trỏ tới mảng dung lượng tối đa của các bậc (max)
+# $s3 : Con trỏ trỏ tới mảng đơn giá tương ứng của các bậc (price)
+# $s4 : Biến đếm số lượng bậc còn lại (khởi tạo = 6)
+# $t0 : Dung lượng tối đa của bậc hiện tại đang xét (nạp từ mảng max)
+# $t1 : Đơn giá của bậc hiện tại đang xét (nạp từ mảng price)
+# $t2 : Số kWh thực tế sẽ tính tiền ở bậc hiện tại
+# $t3 : Tiền điện tính riêng cho bậc hiện tại ($t2 * $t1)
+# $at : Thanh ghi tạm lưu kết quả kiểm tra miền nhập [0, 9999]	
+	
 	.data
 msg_in: .asciiz "Nhap so kWh: "
 msg_err: .asciiz "Gia tri khong hop le, nhap lai di\n"
